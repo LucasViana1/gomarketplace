@@ -38,9 +38,7 @@ const Dashboard: React.FC = () => {
       // TODO
       try {
         const response = await api.get('products');
-        console.log(response.data);
         setProducts(response.data);
-        console.log('oi');
       } catch (err) {
         console.log(err);
       }
@@ -50,6 +48,7 @@ const Dashboard: React.FC = () => {
 
   function handleAddToCart(item: Product): void {
     // TODO
+    addToCart(item);
   }
 
   return (
